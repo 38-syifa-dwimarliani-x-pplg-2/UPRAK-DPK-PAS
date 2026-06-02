@@ -1,0 +1,184 @@
+/* 1. PENGATURAN DASAR & EFEK SCROLL */
+html {
+    /* Membuat efek geser layar jadi mulus pas menu navbar diklik */
+    scroll-behavior: smooth; 
+}
+
+* {
+    /* Reset margin dan padding bawaan browser biar sesuai */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    /* Mengatur warna latar belakang halaman web dan warna teks utamanya */
+    background-color: #fcf8f2;
+    color: #332211;
+}
+
+/* 2. HEADER & NAVIGATION (Flexbox) */
+.header {
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 6%;
+    /* Membuat header tetap menempel di atas layar pas di-scroll */
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    /* Memberikan efek bayangan tipis di bawah header */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+/* Mengatur ukuran, ketebalan, dan warna tulisan logo kafe */
+.logo { font-size: 1.3rem; font-weight: bold; color: #6f4e37; }
+
+/* Mengatur tampilan link menu navbar */
+.navbar a {
+    text-decoration: none; /* Menghilangkan garis bawah pada link */
+    color: #555;
+    font-weight: 600;
+    margin-left: 15px; /* Memberi jarak antar menu */
+    transition: 0.3s; /* Efek jeda halus saat warna berubah */
+}
+
+/* Mengubah warna teks menu saat kursor mouse mendekat (hover) */
+.navbar a:hover { color: #6f4e37; }
+
+/* 3. HERO BANNER */
+.hero {
+    background: #6f4e37;
+    color: #fff;
+    text-align: center;
+    padding: 50px 20px; /* Memberi ruang di dalam banner atas dan bawah */
+}
+.hero h1 { margin-bottom: 10px; }
+
+/* 4. LAYOUT DAFTAR MENU (CSS Grid) */
+.container { padding: 40px 6%; }
+.menu-section { margin-bottom: 40px; }
+
+/* Mengatur gaya tulisan judul kategori (Varian Kopi, dll) dan garis bawahnya */
+.menu-section h2 {
+    border-bottom: 2px solid #6f4e37;
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+}
+
+/* Mengatur susunan kartu menu jadi kolom otomatis yang fleksibel */
+.grid-menu {
+    display: grid;
+    /* Membuat kolom otomatis pas di HP/Laptop, minimal lebar kartu 250px */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px; /* Jarak antar kartu menu */
+}
+
+/* 5. DESIGN KARTU MENU */
+.card {
+    background: #fff;
+    border-radius: 10px; /* Membuat sudut kartu jadi melengkung */
+    padding: 15px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.04);
+    transition: 0.3s;
+    overflow: hidden; /* Biar gambar yang nge-zoom tidak keluar dari kartu */
+}
+
+/* Membuat kartu menu sedikit naik ke atas saat didekati kursor */
+.card:hover { 
+    transform: translateY(-5px); 
+}
+
+/* Kotak Bingkai Pembungkus Gambar Menu */
+.img-box {
+    background: #ffffff; /* Latar putih agar menyatu dengan background aset gambar */
+    width: 100%;       
+    height: 220px;     /* Ukuran tinggi bingkai agar gambar terlihat leluasa */
+    display: flex;
+    justify-content: center; /* Membuat gambar pas di tengah kotak */
+    align-items: center;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+/* Pengaturan Tampilan agar gambar tetap utuh */
+.menu-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; 
+    transition: transform 0.4s ease; /* Efek transisi halus saat gambar membesar */
+}
+
+/* Efek Gambar Membesar (Zoom In) saat kartu menu di-hover */
+.card:hover .menu-img {
+    transform: scale(1.1); 
+}
+
+/* Ukuran tampilan untuk teks emoji jika gambar gagal dimuat */
+.fallback-emoji {
+    font-size: 3.5rem;
+}
+
+.card h3 { margin-bottom: 5px; font-size: 1.1rem; }
+
+/* Mengatur deskripsi menu dan batas tinggi minimal agar posisi tombol sejajar */
+.card p { font-size: 0.9rem; color: #666; margin-bottom: 15px; min-height: 40px; }
+
+/* Mengatur tata letak harga dan tombol button */
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.card-footer span { font-weight: bold; color: #6f4e37; }
+
+/* 6. TOMBOL PESAN */
+.btn {
+    background: #6f4e37;
+    color: #fff;
+    border: none;
+    padding: 7px 14px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer; 
+    transition: 0.2s;
+}
+
+/* Mengubah warna tombol menjadi cokelat tua saat di-hover */
+.btn:hover { background: #4a3222; }
+
+/* 7. FOOTER SECTIONS */
+.footer {
+    text-align: center;
+    background: #332211;
+    color: #fff;
+    padding: 30px 20px;
+}
+.footer h3 {
+    color: #d4a373;
+    margin-bottom: 5px;
+    font-size: 1.4rem;
+}
+.footer .slogan {
+    font-size: 0.95rem;
+    font-style: italic; /* Membuat teks slogan menjadi miring */
+    color: #dfd5ca;
+    margin-bottom: 15px;
+}
+.footer .copyright {
+    font-size: 0.8rem;
+    color: #a69a8f;
+    border-top: 1px solid #4a3222; /* Garis pembatas tipis di atas teks copyright */
+    padding-top: 10px;
+    display: inline-block;
+}
+
+/* 8. RESPONSIVE DESIGN */
+@media (max-width: 650px) {
+    /* Kalau ukuran layar di bawah 650px (HP), header berubah susunannya jadi vertikal ke bawah */
+    .header { flex-direction: column; gap: 10px; text-align: center; }
+}

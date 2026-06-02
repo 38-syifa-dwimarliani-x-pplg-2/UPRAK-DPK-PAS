@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <!-- Pengaturan dasar website, seperti jenis huruf teks dan agar tampilan web otomatis pas saat dibuka di layar HP atau laptop -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syisi & Co. - Menu Digital</title>
+    
+    <!-- Link untuk menghubungkan file HTML ini dengan file CSS-->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Bagian paling atas website yang berisi nama kafe (logo) dan Navbar utama -->
+    <header class="header">
+        <div class="logo">☕ Syisi & Co.</div>
+        <nav class="navbar">
+            <!-- Code ini jika diklik maka halaman akan otomatis meluncur halus ke bagian menu tersebut -->
+            <a href="#kopi">Kopi</a>
+            <a href="#non-kopi">Non-Kopi</a>
+            <a href="#makanan">Makanan</a>
+        </nav>
+    </header>
+
+    <!-- Bagian banner utama (Hero Section) untuk sebagai tampilan awal dengan nama kafe dan slogan -->
+    <section class="hero">
+        <h1>Selamat Datang di Kopi Syisi & Co.</h1>
+        <p>Menemukan Ketenangan di Setiap Seduhan</p>
+        <p>Nikmati pilihan menu terbaik kami dengan suasana yang menenangkan.</p>
+    </section>
+
+    <!-- Code ini untuk menampung seluruh konten utama atau daftar kategori menu kafe -->
+    <main class="container">
+        
+        <!-- KATEGORI MENU : KHUSUS DAFTAR VARIAN KOPI -->
+        <section id="kopi" class="menu-section">
+            <h2>Varian Kopi</h2>
+            
+            <!-- Bagian class grid otomatis dari CSS agar susunan kartu menu rapi -->
+            <div class="grid-menu">
+                <!-- Bagian menu 1 -->
+                <article class="card">
+                    <div class="img-box">
+                        <img src="img/espreso.jpg" alt="Espresso" class="menu-img">
+                    </div>
+                    <h3>Espresso</h3>
+                    <p>Ekstrak kopi murni yang pekat dan beraroma kuat.</p>
+                    <div class="card-footer">
+                        <span>Rp 18.000</span>
+                        <button class="btn">Pesan</button>
+                    </div>
+                </article>
+                <!-- Bagian menu 2 -->
+                <article class="card">
+                    <div class="img-box">
+                        <img src="img/kopi gula aren.jpg" alt="Kopi Susu Gula Aren" class="menu-img">
+                    </div>
+                    <h3>Kopi Susu Gula Aren</h3>
+                    <p>Espresso premium dicampur susu segar dan gula aren asli.</p>
+                    <div class="card-footer">
+                        <span>Rp 22.000</span>
+                        <button class="btn">Pesan</button>
+                    </div>
+                </article>
+                <!-- Bagian menu 3-->
+                <article class="card">
+                    <div class="img-box">
+                        <img src="img/butterscoth.jpg" alt="Butterscotch Latte" class="menu-img">
+                    </div>
+                    <h3>Butterscotch Latte</h3>
+                    <p>Paduan espresso dengan sirup bumbu mentega karamel gurih manis.</p>
+                    <div class="card-footer">
+                        <span>Rp 26.000</span>
+                        <button class="btn">Pesan</button>
+                    </div>
+                </article>
+                <!-- Bagian menu 4 -->
+                <article class="card">
+                    <div class="img-box">
+                        <img src="img/latte art.jpg" alt="Latte Art" class="menu-img">
+                    </div>
+                    <h3> Latte Art</h3>
+                    <p>Kombinasi espresso, susu, dan foam lembut yang menyegarkan.</p>
+                    <div class="card-footer">
+                        <span>Rp 25.000</span>
+                        <button class="btn">Pesan</button>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- KATEGORI MENU 2: KHUSUS DAFTAR VARIAN NON-KOPI -->
+        <section id="non-kopi" class="menu-section">
+            <h2>Varian Non-Kopi</h2>
+            <div class="grid-menu">
+                
+                <!-- Bagian menu 5 -->
+                <article class="card">
+                    <div class="img-box">
+                        <img src="img/matcha latte.jpg" alt="Matcha Latte" class="menu-img">
+                    </div>
+                    <h3>Matcha Latte</h3>
+                    <p>Teh hijau jepang otentik dipadukan dengan susu creamy.</p>
+                    <div class="card-footer">
+                        <span>Rp 24.000</span>
+                        <button class="btn">Pesan</button>
+                    </div>
+                </article>
+                <!-- Bagian menu 6 -->
+                <article class="card">
+                    <div class="img-box">
+                        <img src="img/choco.jpg" alt="Signature Chocolate" class="menu-img">
+                    </div>
+                    <h3>Signature Chocolate</h3>
+                    <p>Cokelat premium pekat yang disajikan hangat atau dingin.</p>
+                    <div class="card-footer">
+                        <span>Rp 25.000</span>
+                        <button class="btn">Pesan</button>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- KATEGORI MENU 3: KHUSUS DAFTAR MAKANAN CEMILAN -->
+        <section id="makanan" class="menu-section">
+            <h2>Makanan Cemilan</h2>
+            <div class="grid-menu">
+                
+                <!-- Bagian menu makanan -->
+                <article class="card">
+                    <div class="img-box">
+                        <img src="img/croisant.jpg" alt="Croissant Butter" class="menu-img">
+                    </div>
+                    <h3>Croissant Butter</h3>
+                    <p>Kue pastri renyah bercita rasa mentega yang gurih.</p>
+                    <div class="card-footer">
+                        <span>Rp 20.000</span>
+                        <button class="btn">Pesan</button>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="img-box">
+                        <img src="img/french fries.jpg" alt="French Fries" class="menu-img">
+                    </div>
+                    <h3>French Fries</h3>
+                    <p>Kentang goreng renyah ditaburi bumbu kaldu spesial.</p>
+                    <div class="card-footer">
+                        <span>Rp 15.000</span>
+                        <button class="btn">Pesan</button>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Bagian paling bawah website (Footer) untuk info hak cipta nama pemilik web -->
+    <footer class="footer">
+        <h3>Syisi & Co.</h3>
+        <p class="slogan">"Menemukan Ketenangan di Setiap Seduhan"</p>
+        <p>&copy; 2026 Syisi & Co. Crafted by Syifa.</p>
+    </footer>
+
+</body>
+</html>
